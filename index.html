@@ -35,49 +35,63 @@
           </span>
 
           <img
-            src="https://avatars.githubusercontent.com/u/88198841?s=400&u=3faa5793e4b83eff324841406125f759a4f691b3&v=4"
+            src="https://lorempixel.com/185/185/people/"
             alt="Foto pessoal"
           />
         </div>
 
-        <h1>Victor Borges</h1>
-        <a href="https://github.com/victorborgesoliveira">
+        <h1 id="userName">Maykbrito</h1>
+        <a href="https://github.com/maykbrito">
           <img src="images/github.svg" alt="ícone github" />
-          victorborgesoliveira</a
+          maykbrito</a
         >
 
-        <p>An student wanting for helping to start programming for web</p>
+        <p>An instructor focused on helping people start programming for web</p>
 
-        <ul>
-          <li>
-            <a href="https://facebook.com/Victor Borges">
-              <img
-                src="images/facebook.svg"
-                alt="ícone facebook"
-                target="_blank"
-              />
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com/maykbrito" target="_blank">
+              <img src="images/youtube.svg" alt="ícone facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/micoleaonoiado">
-              <img
-                src="images/twitter.svg"
-                alt="ícone twitter"
-                target="_blank"
-              />
+          <li class="facebook">
+            <a href="https://facebook.com/maykbrito" target="_blank">
+              <img src="images/facebook.svg" alt="ícone facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://instagram.com/vitinrt7">
-              <img
-                src="images/instagram.svg"
-                alt="ícone instagram"
-                target="_blank"
-              />
+          <li class="twitter">
+            <a href="https://twitter.com/maykbrito" target="_blank">
+              <img src="images/twitter.svg" alt="ícone twitter" />
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://instagram.com/maykbrito" target="_blank">
+              <img src="images/instagram.svg" alt="ícone instagram" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+    <script>
+      const LinksSocialMedia = {
+        github: 'victorborgesdeoliveira',
+        youtube: 'jakelinygracielly',
+        facebook: 'victor.borges',
+        twitter: 'leaonoiado',
+        instagram: 'vitinrt7'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `http://${social}.com/${LinksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
